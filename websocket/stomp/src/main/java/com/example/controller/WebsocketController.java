@@ -1,7 +1,8 @@
 package com.example.controller;
 
-import com.example.bean.ResponseMessage;
-import com.sun.corba.se.impl.protocol.giopmsgheaders.RequestMessage;
+import com.example.bean.MyClientMessage;
+import com.example.bean.MyTopicResponseMessage;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author hudongshan
  * 参考：https://www.cnblogs.com/kiwifly/p/11729304.html
  */
+@Slf4j
 @Controller
 public class WebsocketController {
 
@@ -32,14 +34,16 @@ public class WebsocketController {
      * 注意 simpMessagingTemplate.convertAndSendToUser(token, "/msg", msg) ，
      * 联系到我们上文配置的 registry.setUserDestinationPrefix("/user/"),
      * 这里客户端订阅的是/user/{token}/msg,千万不要搞错。
-     * @param requestMessage
+     * @param myClientMessage
      * @return
      */
     @MessageMapping("/hello")
-    @SendTo("/topic/hello")
-    public ResponseMessage hello(RequestMessage requestMessage) {
-        System.out.println("接收消息：" + requestMessage);
-        return new ResponseMessage("服务端接收到你发的：" + requestMessage);
+    @SendTo("/topic/my_topic")
+    public MyTopicResponseMessage hello(MyClientMessage myClientMessage) {
+
+        log.info("myClientMessage = {}", myClientMessage);
+
+        return new MyTopicResponseMessage("服务端接收到你发的：" + myClientMessage.getName());
     }
 
     @GetMapping("/sendMsgByUser")
@@ -56,8 +60,12 @@ public class WebsocketController {
         return "success";
     }
 
-    @GetMapping("/test")
+    /**
+     * web 客户端测试地址
+     * @return
+     */
+    @GetMapping("/client")
     public String test() {
-        return "test-stomp.html";
+        return "client.html";
     }
 }
