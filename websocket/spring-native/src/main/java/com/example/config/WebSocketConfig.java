@@ -11,8 +11,8 @@ import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry
  * web socket 配置
  * @author hudongshan
  */
-@EnableWebSocket
 @Configuration
+@EnableWebSocket
 public class WebSocketConfig implements WebSocketConfigurer {
 
     @Override
