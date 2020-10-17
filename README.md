@@ -10,8 +10,8 @@ SpringBoot2.x 练手
 
 
 #####项目说明
-
-`└── websocket
-     ├── java-native-annotation
-     └── spring-native
-`
+```
+└── websocket
+    ├── java-native-annotation (java 原生注解方式实现)
+    └── spring-native (spring 低级别封装实现)
+```
