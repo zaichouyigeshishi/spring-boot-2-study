@@ -21,6 +21,7 @@ function connect() {
     stompClient.connect({}, function (frame) {
 
         setConnected(true);
+
         console.log('Connected: ' + frame);
 
         stompClient.subscribe('/topic/my_topic', function (greeting) {
@@ -30,10 +31,13 @@ function connect() {
 }
 
 function disconnect() {
+
     if (stompClient !== null) {
         stompClient.disconnect();
     }
+
     setConnected(false);
+
     console.log("Disconnected");
 }
 
