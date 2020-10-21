@@ -3,17 +3,15 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.example</groupId>
-	<artifactId>stomp</artifactId>
+	<artifactId>swagger3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>stomp</name>
-	<description>stomp 方式实现 websocket</description>
-
+	<name>swagger3</name>
+	<description>SpringBoot 接入 swagger 3.x</description>
 	<parent>
 		<groupId>com.example</groupId>
-		<artifactId>websocket</artifactId>
+		<artifactId>spring-boot-2-study</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -37,10 +35,11 @@
 			<artifactId>spring-boot-starter-undertow</artifactId>
 		</dependency>
 
-		<!-- websocket -->
+		<!-- Swagger 3.x -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-websocket</artifactId>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-boot-starter</artifactId>
+			<version>3.0.0</version>
 		</dependency>
 
 		<dependency>
@@ -48,32 +47,10 @@
 			<artifactId>lombok</artifactId>
 		</dependency>
 
-		<!-- START:stomp web demo 客户端使用到到 web jar -->
 		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>webjars-locator-core</artifactId>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>sockjs-client</artifactId>
-			<version>1.1.2</version>
-		</dependency>
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>stomp-websocket</artifactId>
-			<version>2.3.3-1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>bootstrap</artifactId>
-			<version>3.4.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>jquery</artifactId>
-			<version>3.5.1</version>
-		</dependency>
-		<!-- END:stomp web demo 客户端使用到到 web jar -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

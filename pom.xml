@@ -19,11 +19,13 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <commons-lang3.version>3.11</commons-lang3.version>
     </properties>
 
     <modules>
         <module>grpc</module>
         <module>mqtt</module>
+        <module>swagger3</module>
         <module>websocket</module>
     </modules>
 
@@ -31,6 +33,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
         </dependency>
 
         <dependency>

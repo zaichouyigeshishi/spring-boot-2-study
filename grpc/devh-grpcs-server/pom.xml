@@ -3,14 +3,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.example</groupId>
-	<artifactId>spring-native</artifactId>
+	<artifactId>devh-grpcs-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-native</name>
-	<description>Spring 低级别封装</description>
+	<name>devh-grpcs-server</name>
+	<description>Demo project for Spring Boot</description>
 
 	<parent>
 		<groupId>com.example</groupId>
-		<artifactId>websocket</artifactId>
+		<artifactId>grpc</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
@@ -19,32 +19,9 @@
 	</properties>
 
 	<dependencies>
-		<!-- 切换为 undertow 容器 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-tomcat</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-undertow</artifactId>
-		</dependency>
-
-		<!-- websocket -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-websocket</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
+			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 
 		<dependency>
