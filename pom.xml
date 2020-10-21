@@ -22,6 +22,8 @@
     </properties>
 
     <modules>
+        <module>grpc</module>
+        <module>mqtt</module>
         <module>websocket</module>
     </modules>
 
