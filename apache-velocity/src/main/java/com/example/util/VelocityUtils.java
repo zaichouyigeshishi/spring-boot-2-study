@@ -1,6 +1,5 @@
 package com.example.util;
 
-
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.Velocity;
@@ -8,6 +7,9 @@ import org.apache.velocity.app.Velocity;
 import java.io.StringWriter;
 import java.util.Properties;
 
+/**
+ * @author hudongshan
+ */
 public class VelocityUtils {
 
     public static void main(String[] args) {
