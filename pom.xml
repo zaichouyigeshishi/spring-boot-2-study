@@ -23,6 +23,7 @@
     </properties>
 
     <modules>
+        <module>apache-velocity</module>
         <module>grpc</module>
         <module>mqtt</module>
         <module>swagger3</module>
