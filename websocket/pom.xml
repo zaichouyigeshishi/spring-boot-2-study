@@ -21,6 +21,7 @@
 
 	<modules>
 		<module>java-native-annotation</module>
+		<module>netty-ws</module>
 		<module>spring-native</module>
 		<module>stomp</module>
 	</modules>

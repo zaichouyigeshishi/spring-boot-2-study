@@ -7,6 +7,9 @@ import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
 
 /**
+ * 127.0.0.1:3305/ws
+ * 127.0.0.1:3305/app/hello
+ *
  * @author hudongshan
  */
 @Configuration
